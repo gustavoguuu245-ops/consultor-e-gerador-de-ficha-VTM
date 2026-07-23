@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import random
 from motor.savenpcsgerados import salvar_npc_em_disco
+
 # Importar o motor de geração
 try:
     from motor.gerador_ficha import (
@@ -53,6 +54,27 @@ class HUDGeradorFicha:
         top.geometry("900x700")
         top.configure(bg=CORES["bg_principal"])
         top.transient(parent)
+
+        # -------------------------------------------------------------
+        # FIX DO BUG DE TEXTO QUE SUMIA NAS COMBOBOXES (Ttk Style Fix)
+        # -------------------------------------------------------------
+        style = ttk.Style(top)
+        style.theme_use("clam")
+        
+        style.configure("TCombobox",
+                        fieldbackground=CORES["bg_input"],
+                        background="#222222",
+                        foreground=CORES["texto_principal"],
+                        darkcolor=CORES["borda_padrao"],
+                        lightcolor=CORES["borda_padrao"],
+                        arrowcolor=CORES["texto_principal"])
+
+        style.map("TCombobox",
+                  fieldbackground=[("readonly", CORES["bg_input"]), ("focus", CORES["bg_input"])],
+                  foreground=[("readonly", CORES["texto_principal"]), ("focus", CORES["texto_principal"])],
+                  selectbackground=[("readonly", CORES["vermelho_sangue"]), ("focus", CORES["vermelho_sangue"])],
+                  selectforeground=[("readonly", "#ffffff"), ("focus", "#ffffff")])
+        # -------------------------------------------------------------
         
         # Header
         header = tk.Label(
@@ -93,41 +115,17 @@ class HUDGeradorFicha:
         combo_tipo = ttk.Combobox(left, state="readonly", width=35, font=("Helvetica", 9))
         combo_tipo.pack(fill=tk.X, padx=10, pady=(0, 5))
         
-        def atualizar_tipos(*args):
-            ed = combo_edicao.get()
-            if "3ª" in ed:
-                combo_tipo['values'] = [
-                    "Neófito",
-                    "Ancilla (50-100 anos)",
-                    "Ancião (100-200 anos)",
-                    "Metusalém (1000+ anos)",
-                    "Humano",
-                    "Carniçal"
-                ]
-            else:
-                combo_tipo['values'] = [
-                    "Neófito",
-                    "Ancilla (50-100 anos)",
-                    "Ancião (100-200 anos)",
-                    "Metusalém (1000+ anos)",
-                    "Humano",
-                    "Carniçal"
-                ]
-            combo_tipo.set("Neófito")
-            atualizar_clas()
-        
-        combo_edicao.bind("<<ComboboxSelected>>", atualizar_tipos)
-        
         # --- Clã ---
         tk.Label(left, text="CLÃ", bg=CORES["bg_card"],
                 fg=CORES["vermelho_claro"], font=("Helvetica", 9, "bold"), pady=5).pack(fill=tk.X, padx=10)
         
         combo_cla = ttk.Combobox(left, state="readonly", width=35, font=("Helvetica", 9))
         combo_cla.pack(fill=tk.X, padx=10, pady=(0, 5))
-        
+
         def atualizar_clas(*args):
             ed = combo_edicao.get()
             tipo = combo_tipo.get()
+            cla_anterior = combo_cla.get()
             
             if "Humano" in tipo or "Carniçal" in tipo:
                 combo_cla['values'] = ["Nenhum"]
@@ -136,11 +134,38 @@ class HUDGeradorFicha:
             else:
                 combo_cla.config(state="readonly")
                 if "3ª" in ed:
-                    combo_cla['values'] = sorted(CLAS["3a_edicao"].keys())
+                    novos_valores = sorted(CLAS["3a_edicao"].keys())
                 else:
-                    combo_cla['values'] = sorted(CLAS["dark_ages"].keys())
-                combo_cla.set("Brujah")
+                    novos_valores = sorted(CLAS["dark_ages"].keys())
+                
+                combo_cla['values'] = novos_valores
+                
+                # Se o clã selecionado antes ainda existir na nova lista, mantém ele.
+                if cla_anterior in novos_valores:
+                    combo_cla.set(cla_anterior)
+                else:
+                    combo_cla.set(novos_valores[0] if novos_valores else "Brujah")
         
+        def atualizar_tipos(*args):
+            tipo_anterior = combo_tipo.get()
+            opcoes_tipos = [
+                "Neófito",
+                "Ancilla (50-100 anos)",
+                "Ancião (100-200 anos)",
+                "Metusalém (1000+ anos)",
+                "Humano",
+                "Carniçal"
+            ]
+            combo_tipo['values'] = opcoes_tipos
+            
+            if tipo_anterior in opcoes_tipos:
+                combo_tipo.set(tipo_anterior)
+            else:
+                combo_tipo.set("Neófito")
+                
+            atualizar_clas()
+        
+        combo_edicao.bind("<<ComboboxSelected>>", atualizar_tipos)
         combo_tipo.bind("<<ComboboxSelected>>", atualizar_clas)
         
         # --- Foco ---
@@ -324,7 +349,6 @@ class HUDGeradorFicha:
         def _mapear_tipo(edicao, tipo_str):
             """Mapeia seleção da UI para chave do REGRAS"""
             is_3a = "3ª" in edicao
-            is_da = "Dark" in edicao
             
             if "Neófito" in tipo_str:
                 return "neofito_3a" if is_3a else "neofito_da"
