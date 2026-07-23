@@ -1,0 +1,328 @@
+
+NPCS_BASE = {
+    "Mortais da Idade das Trevas (DA)": {
+        "Artesão (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Dão vida às aldeias e cidades; ocupam diversas profissões, desde a carpintaria e curtição de couro até a fabricação de cerveja.",
+            "atributos": {
+                "Força": 2, "Destreza": 3, "Vigor": 1,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Percepção": 2, "Etiqueta": 1, "Ofícios": 3
+            },
+            "antecedentes": "Recursos 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "5 dados para testes de Ofícios; 4 dados para Percepção/Etiqueta."
+        },
+        "Servo de Taberna (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Mulher calejada ou rapaz robusto; o servo de taberna costuma ser um poço de informações e boatos.",
+            "atributos": {
+                "Força": 1, "Destreza": 2, "Vigor": 2,
+                "Carisma": 3, "Manipulação": 2, "Aparência": 3,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 1
+            },
+            "habilidades": {
+                "Prontidão": 2, "Empatia": 2, "Lábia": 2
+            },
+            "antecedentes": "Contatos 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "5 dados para Carisma/Lábia/Empatia; 4 dados para Prontidão."
+        },
+        "Assassino (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Indivíduo do submundo medieval que subsiste nutrindo-se do sangue e do suor alheio.",
+            "atributos": {
+                "Força": 2, "Destreza": 2, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Armas Brancas": 2, "Briga": 2, "Furtividade": 2
+            },
+            "antecedentes": "Contatos 1",
+            "virtudes": "Consciência 1, Instinto 3, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "4 dados em Armas Brancas, Briga e Furtividade."
+        },
+        "Artista (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Dos músicos de taberna aos bufões de corte; agradam a todos os setores da sociedade medieval.",
+            "atributos": {
+                "Força": 1, "Destreza": 3, "Vigor": 1,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 3
+            },
+            "habilidades": {
+                "Performance": 2, "Etiqueta": 2, "Expressão": 2
+            },
+            "antecedentes": "Aliados 1",
+            "virtudes": "Consciência 2, Instinto 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "5 dados em Performance/Etiqueta; 4 dados em Expressão."
+        },
+        "Fazendeiro (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "População mais numerosa da Idade Média, habitando zonas rurais e de subsistência.",
+            "atributos": {
+                "Força": 3, "Destreza": 2, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 1, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Cavalgar": 2, "Sabedoria Popular": 2, "Empatia com Animais": 2
+            },
+            "antecedentes": "Aliados 1 (Família)",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "4 dados em Cavalgar, Sabedoria Popular e Empatia com Animais."
+        },
+        "Oficial de Guarda (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Encarregado de manter a ordem nas vilas e cidades, com treinamento básico de combate.",
+            "atributos": {
+                "Força": 3, "Destreza": 2, "Vigor": 3,
+                "Carisma": 1, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 1, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Armas Brancas": 2, "Esquiva": 2, "Intimidação": 2
+            },
+            "antecedentes": "Aliados 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "5 dados em Armas Brancas e Intimidação; 4 dados em Esquiva."
+        },
+        "Arqueiro Recruta (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Camponês convocado e equipado com arcos longos ou bestas, atuando como força de combate letal à distância.",
+            "atributos": {
+                "Força": 2, "Destreza": 3, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 1, "Aparência": 1,
+                "Percepção": 3, "Inteligência": 2, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Esquiva": 2, "Artesanato": 2, "Arqueirismo": 2
+            },
+            "antecedentes": "Aliados 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "5 dados em Arqueirismo e Percepção; 4 dados em Esquiva."
+        }
+    },
+    "Mortais Notáveis (DA)": {
+        "Erudito (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Homem letrado dedicado ao estudo de diversos campos, desde a teologia e astronomia até filosofias antigas.",
+            "atributos": {
+                "Força": 1, "Destreza": 2, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 3, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Instrução": 3, "Ocultismo": 1, "Direito": 2, "Teologia": 2
+            },
+            "antecedentes": "Contatos 1, Mentor 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "6 dados para Instrução; 5 dados em Teologia, Direito e Ocultismo."
+        },
+        "Nobre (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Membro da nobreza medieval com posição social de liderança e privilégios de nascimento.",
+            "atributos": {
+                "Força": 2, "Destreza": 2, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Etiqueta": 3, "Expressão": 1, "Liderança": 2, "Linguística": 2
+            },
+            "antecedentes": "Criados 1, Influência 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "5 dados em Etiqueta; 4 dados em Liderança e Linguística."
+        },
+        "Lacaio Mercenário (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Soldado calejado por guerras e escaramuças, treinado no combate e na sobrevivência áspera.",
+            "atributos": {
+                "Força": 3, "Destreza": 3, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 1, "Aparência": 1,
+                "Percepção": 2, "Inteligência": 1, "Raciocínio": 1
+            },
+            "habilidades": {
+                "Armas Brancas": 3, "Esquiva": 2, "Briga": 2, "Sobrevivência": 1
+            },
+            "antecedentes": "Aliados 1, Contatos 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "6 dados em Armas Brancas; 5 dados em Briga e Esquiva."
+        },
+        "Sábia / Bruxa (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Consultora e curandeira local procurada para conselhos, tratamentos e conhecimento de ervas ou feitiços.",
+            "atributos": {
+                "Força": 1, "Destreza": 1, "Vigor": 1,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 3, "Inteligência": 3, "Raciocínio": 3
+            },
+            "habilidades": {
+                "Empatia": 2, "Intimidação": 1, "Medicina": 2, "Sabedoria Popular": 3
+            },
+            "antecedentes": "Contatos 1, Influência 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "6 dados para Sabedoria Popular e Medicina; 5 dados em Empatia e Percepção."
+        },
+        "Cavaleiro (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Guerreiro nobre treinado, força decisiva nos campos de batalha e torneios feudais.",
+            "atributos": {
+                "Força": 2, "Destreza": 2, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Armas Brancas": 2, "Montaria": 2, "Etiqueta": 2, "Liderança": 2
+            },
+            "antecedentes": "Aliados 2",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "4 dados em Armas Brancas, Montaria, Etiqueta e Liderança."
+        },
+        "Comerciante (DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Mercador e diplomata itinerante, fonte constante de produtos raros e informações da região.",
+            "atributos": {
+                "Força": 2, "Destreza": 1, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 3
+            },
+            "habilidades": {
+                "Comércio": 2, "Montaria": 2, "Etiqueta": 2, "Linguística": 2
+            },
+            "antecedentes": "Contatos 1, Recursos 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "5 dados em Raciocínio/Comércio; 4 dados em Linguística e Etiqueta."
+        },
+        "Castelão Ancião (Carniçal DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Carniçal encarregado da administração diurna do castelo, extremamente preparado, consciente e leal.",
+            "atributos": {
+                "Força": 1, "Destreza": 2, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 4, "Aparência": 2,
+                "Percepção": 3, "Inteligência": 3, "Raciocínio": 3
+            },
+            "habilidades": {
+                "Alerta": 2, "Esquiva": 1, "Etiqueta": 2, "Intimidação": 2,
+                "Direito": 2, "Senescalia": 3
+            },
+            "antecedentes": "Aliados 1, Contatos 2, Influência 1",
+            "disciplinas": "Potência 1",
+            "virtudes": "Convicção 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "7 dados para Manipulação/Senescalia; 5 dados em Alerta, Etiqueta e Direito."
+        },
+        "Intermediário (Carniçal DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Agente e manipulador de confiança dos Cainitas no mundo mortal, usado para resolver crises e chantagens.",
+            "atributos": {
+                "Força": 3, "Destreza": 2, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 3, "Inteligência": 2, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Prontidão": 3, "Armas Brancas": 3, "Esquiva": 3, "Etiqueta": 3,
+                "Furtividade": 3, "Lábia": 3
+            },
+            "antecedentes": "Aliados 2, Contatos 2",
+            "disciplinas": "Potência 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "vitalidade": 7,
+            "forca_de_vontade": 3,
+            "reserva_padrao": "6 dados para Armas Brancas e Prontidão; 5 dados para Lábia, Furtividade e Esquiva."
+        }
+    },
+    "Cainitas da Idade das Trevas (DA)": {
+        "Informante (Nosferatu DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Ladrão das sombras do Clã Nosferatu (12ª Geração) que negocia segredos entre o mundo mortal e o Cainita.",
+            "atributos": {
+                "Força": 2, "Destreza": 3, "Vigor": 2,
+                "Carisma": 2, "Manipulação": 4, "Aparência": 0,
+                "Percepção": 4, "Inteligência": 3, "Raciocínio": 3
+            },
+            "habilidades": {
+                "Acadêmicos": 2, "Prontidão": 2, "Empatia": 1, "Esquiva": 2,
+                "Direito": 2, "Linguística": 2, "Furtividade": 3, "Lábia": 2
+            },
+            "antecedentes": "Aliados 1, Contatos 3, Status 1, Rebanho 1, Recursos 2",
+            "disciplinas": "Animalismo 1, Ofuscação 2, Potência 1",
+            "virtudes": "Consciência 2, Autocontrole 2, Coragem 2",
+            "humanidade": "Trilha do Vigor / Humanidade",
+            "vitalidade": 7,
+            "forca_de_vontade": 4,
+            "reserva_padrao": "6 dados para Manipulação/Lábia/Furtividade; 7 dados em Percepção/Prontidão."
+        },
+        "Cruzado (Brujah DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Cavaleiro do Clã Brujah (10ª Geração) guiado pela religião ou objetivos políticos na guerra santa.",
+            "atributos": {
+                "Força": 4, "Destreza": 3, "Vigor": 4,
+                "Carisma": 3, "Manipulação": 2, "Aparência": 2,
+                "Percepção": 2, "Inteligência": 2, "Raciocínio": 3
+            },
+            "habilidades": {
+                "Armas Brancas": 2, "Montaria": 2, "Esquiva": 2, "Intimidação": 2,
+                "Liderança": 2, "Linguística": 2, "Briga": 2, "Política": 2
+            },
+            "antecedentes": "Aliados 2, Contatos 1, Criados 1, Geração 2, Status 1, Rebanho 1",
+            "disciplinas": "Rapidez 1, Potência 1, Presença 2",
+            "virtudes": "Convicção 2, Autocontrole 2, Coragem 3",
+            "humanidade": "Caminho dos Reis",
+            "vitalidade": 7,
+            "forca_de_vontade": 4,
+            "reserva_padrao": "6 dados para Força/Armas Brancas/Briga; 5 dados em Intimidação e Liderança."
+        },
+        "Sacerdote Herege (Lasombra DA)": {
+            "edicao": "V20 / Dark Ages",
+            "descricao": "Cainita do Clã Lasombra (12ª Geração) infiltrado no clero para acumular poder místico e político.",
+            "atributos": {
+                "Força": 2, "Destreza": 2, "Vigor": 2,
+                "Carisma": 4, "Manipulação": 4, "Aparência": 3,
+                "Percepção": 3, "Inteligência": 3, "Raciocínio": 2
+            },
+            "habilidades": {
+                "Empatia": 2, "Esquiva": 1, "Expressão": 2, "Liderança": 2,
+                "Linguística": 2, "Ocultismo": 2, "Política": 2, "Teologia": 3
+            },
+            "antecedentes": "Contatos 2, Criados 1, Domínio 2, Influência 1, Rebanho 2",
+            "disciplinas": "Dominação 2, Tenebrosidade 1, Potência 1",
+            "virtudes": "Convicção 3, Autocontrole 2, Coragem 1",
+            "humanidade": "Caminho da Noite",
+            "vitalidade": 7,
+            "forca_de_vontade": 4,
+            "reserva_padrao": "7 dados em Teologia e Manipulação; 6 dados em Carisma, Liderança e Ocultismo."
+        }
+    }
+}    

@@ -1,0 +1,397 @@
+
+
+NPCS_BASE = {
+    "Red List / Anátema": {
+        "Ângelo": {
+            "edicao": "Red List / V20",
+            "descricao": "Irmão de Sangue de 8ª Geração. Psicopata de sanidade fraturada que busca um 'irmão' inexistente.",
+            "atributos": {
+                "Força": 5, "Destreza": 5, "Vigor": 5,
+                "Carisma": 5, "Manipulação": 5, "Aparência": 5,
+                "Percepção": 5, "Inteligência": 5, "Raciocínio": 5
+            },
+            "habilidades": {
+                "Esportes": 3, "Briga": 5, "Esquiva": 5, "Intimidação": 4, "Liderança": 3,
+                "Manha": 5, "Boemia": 3, "Condução": 2, "Luta às Cegas": 4, "Saque Rápido": 5,
+                "Armas de Fogo": 5, "Caminhar nas Chamas": 4, "Interrogação": 3, "Leitura Labial": 3,
+                "Armas Brancas": 5, "Furtividade": 2, "Sobrevivência": 5, "Conhecimento de LA": 5,
+                "Ciência Militar": 4, "Ocultismo": 2
+            },
+            "disciplinas": "Rapidez 5, Dominação 2, Fortitude 5, Ofuscação 2, Potência 4, Metamorfose 3, Sanguinus 5, Vicissitude 4",
+            "vitalidade": 7,
+            "humanidade": 2,
+            "forca_de_vontade": 8,
+            "reserva_padrao": "10 dados para Testes de Armas de Fogo/Briga/Armas Brancas; 10 dados em Manha/Sobrevivência.",
+            "texto_livro": """SEU MODUS OPERANDI:
+Ângelo reteve seu conhecimento de rua e suas habilidades de sua vida mortal, incluindo grande habilidade com armas de fogo. Ele pode utilizar praticamente qualquer arma em que ponha as mãos. Recentemente Ângelo começou a criar progênie de qualquer um que pareça seu irmão mortal. Estas crias sempre entram em frenesi e o atacam, então ele se vê forçado a destruí-las. Isto está adicionando novas facetas a sua já fraturada sanidade.
+
+Ângelo algumas vezes entra em frenesi e se percebe numa cidade diferente da que estava antes, sem memórias da jornada. Ele tem a habilidade especial de exercer certo controle sobre o frenesi de temor de outros Irmãos de Sangue.
+
+SEUS CRIMES:
+A Camarilla tomou conhecimento de Ângelo quando este matou alguns vampiros em Baltimore. A Camarilla sabe que ele está fazendo progênie. Ela o considera um anarquista de sorte que conseguiu iludir as autoridades.
+
+CLÃ QUE O CAÇA:
+Os Tremere descobriram coisas interessantes a respeito de Ângelo – primeiramente a manifestação de sua aura. Eles adorariam por as mãos nele e estudar seus segredos para analisar uma amostra de seu sangue.
+
+IMAGEM & APARÊNCIA:
+O semblante punk exterior se mistura com uma beleza e físico impressionantes. Na verdade sua aparência é perfeita demais, deixando-o com um ar inumano. Ângelo tem uma tatuagem em forma de lágrima vermelha no lóbulo da orelha esquerda e olhos vermelhos brilhantes com vida própria.
+
+CITAÇÃO: 'Você viu meu irmão? Eu o matei uma vez, mas acho que ele ainda anda circulando o fogo... você está tentando matar meu irmão?'
+DICAS DE INTERPRETAÇÃO: Seja intenso, quase vulnerável, fale continuamente e conecte conceitos de forma ilógica.
+REFÚGIO: Qualquer lugar serve.
+RUMORES: Você é um membro Sabá (F); Você é um Tzimisce (F); Você está sempre em frenesi (F); Você ama o fogo (V)."""
+        },
+
+        "Rabbat": {
+            "edicao": "Red List / V20",
+            "descricao": "Nosferatu de 7ª Geração, vulgo 'Cloacina, a Deusa dos Esgotos'. Portadora de pragas e doenças sobrenaturais.",
+            "atributos": {
+                "Força": 4, "Destreza": 5, "Vigor": 5,
+                "Carisma": 2, "Manipulação": 4, "Aparência": 0,
+                "Percepção": 5, "Inteligência": 2, "Raciocínio": 4
+            },
+            "habilidades": {
+                "Prontidão": 5, "Esquiva": 4, "Empatia": 3, "Investigação": 5, "Manha": 4,
+                "Empatia c/ Animais": 4, "Disfarce": 3, "Condução": 3, "Mecânica": 4,
+                "Reparo": 3, "Furtividade": 4, "Geografia": 3, "História": 3,
+                "Conhecimento de Membros": 2, "Linguística": 4, "Medicina": 2,
+                "Naturalismo": 2, "Conhecimento dos Esgotos": 5
+            },
+            "disciplinas": "Animalismo 5, Auspícios 1, Rapidez 2, Dominação 2, Fortitude 6, Ofuscação 5, Potência 4, Metamorfose 2",
+            "vitalidade": 7,
+            "humanidade": 4,
+            "forca_de_vontade": 7,
+            "reserva_padrao": "10 dados para Investigação / Conhecimento dos Esgotos / Animalismo; 9 dados para Prontidão/Esquiva.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Rabbat é uma das criaturas mais feias vagando no mundo atualmente. Qualquer mortal que veja seu rosto deve fazer uma jogada de Força de Vontade (dificuldade 7) ou ganhar uma perturbação. Ela se cobre usando muitas roupas, preferindo chapéus e mantas. Seus olhos são assustadores e de tom amarelo-alaranjado (rolagem de Força de Vontade dif 5 apenas para olhá-la no rosto).
+
+CITAÇÃO: 'Por favor não chegue mais perto. Eu vou deixá-lo doente.'
+DICAS DE INTERPRETAÇÃO: Se curve e bajule se achar que isso te levará a algum lugar.
+REFÚGIO: Sua van.
+RUMORES: A doença que você carrega é sempre fatal (V); você é fascinada pelo fogo (V); você causou muitos incêndios (F); O Centro de Controle de Doenças está seguindo seu rastro (V)."""
+        },
+
+        "Genina": {
+            "edicao": "Red List / V20",
+            "descricao": "Samedi de 6ª Geração ('A Poeta Carmesim'). Aparente criança de 9 anos com uma mente sádica e poderes Ilusórios letais.",
+            "atributos": {
+                "Força": 2, "Destreza": 7, "Vigor": 4,
+                "Carisma": 3, "Manipulação": 6, "Aparência": 0,
+                "Percepção": 5, "Inteligência": 6, "Raciocínio": 7
+            },
+            "habilidades": {
+                "Atuar": 5, "Prontidão": 2, "Expressão Artística": 3, "Briga": 4, "Esquiva": 4,
+                "Empatia": 4, "Intimidação": 4, "Liderança": 2, "Poesia": 3, "Sedução": 4,
+                "Manha": 2, "Empatia c/ Animais": 1, "Dança": 2, "Disfarce": 2,
+                "Escapologia": 5, "Falar Rapido": 6, "Performance": 5, "Furtividade": 5,
+                "Tortura": 3, "Linguística": 3, "Literatura Infantil": 5, "Ocultismo": 2,
+                "Psicologia": 3, "Conhecimento Espiritual": 2, "Teologia": 1
+            },
+            "disciplinas": "Auspícios 4, Rapidez 4, Quimerismo 7, Dominação 3, Fortitude 3, Necromancia 2, Ofuscação 4, Potência 3, Presença 1, Metamorfose 3, Tanatosis 6",
+            "vitalidade": 7,
+            "humanidade": 1,
+            "forca_de_vontade": 8,
+            "reserva_padrao": "13 dados em Manipulação+Falar Rapido/Atuar; 12 dados em Raciocínio+Performance; 11 dados em Quimerismo.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+A forma verdadeira de Genina é horrenda de se observar: o cadáver de uma criança em decomposição. Ela usa seus poderes de Ofuscação, Quimerismo ou Dominação para parecer uma menina adorável de qualquer raça. Ela é tão encantadora e perfeita em sua manipulação que quase ninguém percebe o vago cheiro de podridão que fica no ar.
+
+Os seus 2 níveis extras de Quimerismo (nível 7) a permitem criar ilusões que podem ferir várias pessoas fisicamente e criar ilusões que, não importa quão absurdas sejam, serão aceitas como reais.
+
+CITAÇÃO: 'Por favor senhora, me leve pra casa, eu estou com tanta fome....'
+DICAS DE INTERPRETAÇÃO: Sorria muito. Seu lábio inferior está sempre franzido e sua voz é melancólica. Quando as pessoas menos esperarem, grite para assustá-las e em seguida ria histericamente.
+REFÚGIO: Qualquer cemitério numa vizinhança onde muitas crianças vivam.
+RUMORES: Você é um Toreador antitribu ou Malkaviano (F); Você gosta de dormir na terra (V); Você é uma ladra de tumbas (V); Às vezes você come a carne de suas vítimas (V)."""
+        },
+
+        "Enkindu": {
+            "edicao": "Red List / V20",
+            "descricao": "Gangrel de 4ª Geração com dupla personalidade (Noah, o monstro / Sabrina, a jovem). Predador supremo das noites.",
+            "atributos": {
+                "Força": 9, "Destreza": 7, "Vigor": 9,
+                "Carisma": 2, "Manipulação": 3, "Aparência": 0,
+                "Percepção": 9, "Inteligência": 5, "Raciocínio": 6
+            },
+            "habilidades": {
+                "Prontidão": 8, "Atletismo": 5, "Briga": 9, "Esquiva": 8, "Empatia": 3,
+                "Intimidação": 6, "Imitação": 9, "Procurar": 4, "Empatia c/ Animais": 9,
+                "Alteração Corporal": 9, "Caçar": 9, "Furtividade": 8, "Sobrevivência": 9,
+                "Nadar": 3, "Rastrear": 7, "Linguística": 7, "Ocultismo": 4
+            },
+            "disciplinas": "Animalismo 9, Auspícios 2, Rapidez 7, Fortitude 8, Obeah 3, Ofuscação 5, Potência 7, Metamorfose 8, Vicissitude 6, Taumaturgia 3 (Sabrina)",
+            "vitalidade": 7,
+            "humanidade": 4,
+            "forca_de_vontade": 9,
+            "reserva_padrao": "18 dados em Força+Briga / Percepção+Sobrevivência; 16 dados em Destreza+Furtividade/Esquiva.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Enkindu possui duas personalidades distintas. 'Noah' tem uma forma bestial enorme de olhos brancos que muda a cada noite. 'Sabrina' é uma jovem mulher de cabelos negros e olhos azul-esverdeados. 
+
+Seus níveis lendários de Animalismo (9) o tornam irresistível aos animais, permitindo-o fundir corpos de animais ao seu. Níveis de Metamorfose (8) permitem assumir a forma de Sabrina e Vicissitude (6) expandem seu corpo para dimensões colossais.
+
+CITAÇÃO: (Uma terrível pose bestial com gritos que emulam monstruosidades antigas extintas).
+DICAS DE INTERPRETAÇÃO: (Noah) Você é o predador mais poderoso que o mundo já conheceu. Persegue em silêncio e nunca machuca um animal. (Sabrina) Fala com suavidade e busca alianças.
+REFÚGIO: Zoológicos.
+RUMORES: Suas duas naturezas são de criaturas diferentes (F); Você caça Gangrel sem provocação (F); Sua aura parece cantar (V); Você viveu no Canadá (V)."""
+        },
+        "Kemintiri": {
+            "edicao": "Red List / V20",
+            "descricao": "Seguidora de Set de 4ª Geração. A maior mestra do disfarce, ilusão e ilusão política de todos os tempos.",
+            "atributos": {
+                "Força": 7, "Destreza": 9, "Vigor": 8,
+                "Carisma": 8, "Manipulação": 9, "Aparência": 8,
+                "Percepção": 6, "Inteligência": 8, "Raciocínio": 8
+            },
+            "habilidades": {
+                # TALENTOS
+                "Expressão": 8, "Prontidão": 2, "Expressão Artística": 3, "Briga": 6, 
+                "Esquiva": 8, "Empatia": 5, "Intimidação": 7, "Intriga": 7, 
+                "Liderança": 6, "Sedução": 3, "Manha": 4, "Lábia": 8, "Pesquisa (Talento)": 3,
+                # PERÍCIAS
+                "Boêmia": 3, "Dançar": 3, "Disfarce": 3, "Condução": 3, 
+                "Etiqueta": 4, "Falcoaria": 2, "Jogo": 3, "Herbalismo": 3, 
+                "Interrogatório": 5, "Máscara": 4, "Armas Brancas": 4, "Pesquisa (Perícia)": 6, 
+                "Furtividade": 5, "Sobrevivência": 5,
+                # CONHECIMENTOS
+                "Arqueologia": 7, "Astrologia": 3, "Computação": 2, "Criptografia": 2, 
+                "História": 6, "Investigação": 2, "Cultura da Família": 7, "Linguística": 8, 
+                "Cultura Mística": 4, "Medicina": 3, "Ocultismo": 7, "Política": 5, 
+                "Ciência": 3, "Tanatologia": 4, "Teologia": 2
+            },
+            "disciplinas": "Auspícios 6, Bardo 7, Rapidez 4, Dominação 5, Fortitude 4, Necromancia 5, Ofuscação 9, Potência 2, Presença 6, Serpentis 8, Taumaturgia 6 (Linhas: Corrupção 5, Sedução das Chamas 3, Movimento da Mente 3, Conjuração 3, Controle de Elementais 2, Controle Climático 2)",
+            "vitalidade": 7,
+            "humanidade": 2,
+            "forca_de_vontade": 10,
+            "reserva_padrao": "18 dados em Manipulação+Subterfúgio / Disfarce / Ocultismo; Ofuscação 9 e Serpentis 9 permitem roubar identidades e memórias perfeitamente.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+            Kemintiri é uma das criaturas mais antigas e perigosas do Mundo das Trevas. Sacerdotisa e criança direta de Sutekh (Set), ela é famosa por ter se infiltrado na própria Camarilla personificando a Justine Chen (Justicar Ventrue) por anos sem que ninguém percebesse.
+
+            SEU MODUS OPERANDI:
+            Kemintiri utiliza a combinação suprema de Ofuscação 9, Vicissitude e Feitiçaria Setita/Serpentis 9 para assumir a forma, a voz, os trejeitos e até absorver memórias superficiais de príncipes, justicares e anciões. Ela manipula a política global dos Cainitas das sombras, destruindo clãs por dentro e roubando artefatos de poder inestimável.
+
+            SEUS CRIMES:
+            Responsável pelo assassinato e personificação de altos membros do Conclave da Camarilla, roubo do Ocorrido de Praga, profanação de templos ancestrais e o assassinato de dezenas de anciões para alimentar sua sede de sangue antigo.
+
+            IMAGEM & APARÊNCIA:
+            Sua forma natural é a de uma majestosa rainha egípcia da dinastia antiga, com pele dourada, olhos de serpente profundos e uma presença que inspira adoração absoluta ou terror paralisante. No entanto, raramente é vista em sua forma real, preferindo estar usando a pele e a identidade de alguém poderoso.
+
+            CITAÇÃO: 'Você servirá ao meu mestre... mesmo que pense que está servindo ao seu próprio Conselho.'
+            DICAS DE INTERPRETAÇÃO: Seja de uma elegância imperial e assustadoramente serena. Ela nunca perde o controle, sempre fala com calma e vê todos à sua volta apenas como peças de xadrez descartáveis.
+            REFÚGIO: Templos subterrâneos esquecidos e refúgios de anciões que ela assassinou e tomou a identidade.
+            RUMORES: Ela está personificando um membro do círculo interno da Camarilla neste exato momento (V); Ela destruiu o Templo de Set em Cairo (V); Ela pode ler a mente de qualquer um com um simples olhar (V)."""
+                    },
+
+        "Ossian": {
+            "edicao": "Red List / V20",
+            "descricao": "Lobisomem Fianna (Galiard) amaldiçoado e renegado que caça vampiros por sangue para sobreviver.",
+            "atributos": {
+                "Força": 5, "Destreza": 4, "Vigor": 5,
+                "Carisma": 5, "Manipulação": 3, "Aparência": 4,
+                "Percepção": 4, "Inteligência": 3, "Raciocínio": 4
+            },
+            "habilidades": {
+                "Prontidão": 3, "Esquiva": 3, "Esportes": 2, "Briga": 5, "Intimidação": 5,
+                "Mímica": 2, "Liderança": 5, "Empatia c/ Animais": 3, "Navegar": 2,
+                "Caça": 4, "Cavalgar": 2, "Sobrevivência": 5, "Armas Brancas": 3, "Boemia": 3,
+                "Rastrear": 3, "Furtividade": 3, "Ocultismo": 3, "Cultura das Fadas": 5,
+                "Naturalista": 3, "Cultura Lupina": 4, "Conhecimento dos Esgotos": 2, "Cultura Espiritual": 4
+            },
+            "disciplinas": "Animalismo 1, Fortitude 2, Auspícios 2, Ofuscação 1, Potência 2 (Dons: Comunicação Telepática, Odor de Homem, Uivo do Banshee, Canção da Fúria, Olhar de Balor)",
+            "vitalidade": 7,
+            "humanidade": 2,
+            "forca_de_vontade": 10,
+            "reserva_padrao": "10 dados em Força+Briga / Intimidação / Sobrevivência (Atributos dobrados na Forma Crinos).",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+A forma hominídea de Ossian é a de um velho de cabelos cinza-avermelhados e olhos verde-esmeralda. Na forma Crinos tem mais de 2,70m com pelos prateados. Seus Atributos Físicos dobram na forma de combate Crinos e ele usa Fúria para ações extras.
+
+MOTE: 'Eu quero apenas um pouco de seu sangue, rapaz. Quatro litros serão o suficiente.'
+DICAS DE INTERPRETAÇÃO: Se abaixe e assuste bastante.
+REFÚGIO: Esgotos.
+RUMORES: Os Garou querem te pegar (V); Você foi amaldiçoado por magia feérica (V); Você tem 2 filhos (F, tem apenas 1); Você foi distorcido pela Wyrm (F)."""
+        },
+
+        "Dylan": {
+            "edicao": "Red List / V20",
+            "descricao": "Ventrue antitribu de 6ª Geração. Adorador infernalista e possuidor de Pactos Demoníacos.",
+            "atributos": {
+                "Força": 6, "Destreza": 4, "Vigor": 5,
+                "Carisma": 5, "Manipulação": 4, "Aparência": 6,
+                "Percepção": 4, "Inteligência": 4, "Raciocínio": 5
+            },
+            "habilidades": {
+                "Prontidão": 2, "Briga": 2, "Diplomacia": 1, "Esquiva": 2, "Empatia": 3,
+                "Intimidação": 1, "Liderança": 2, "Procurar": 3, "Manha": 1, "Condução": 2,
+                "Armas de Fogo": 2, "Interrogação": 3, "Máscara": 2, "Meditação": 1,
+                "Armas Brancas": 5, "Procedimentos Policiais": 2, "Pesquisar": 2,
+                "Furtividade": 3, "Conhecimento da Mão Negra": 3, "Conhecimento da Camarilla": 1,
+                "História": 1, "Investigação": 3, "Conhecimento dos Membros": 3, "Linguística": 3,
+                "Medicina": 2, "Ocultismo": 4, "Conhecimento do Sabá": 3
+            },
+            "disciplinas": "Auspícios 4, Rapidez 2, Daimoinon 3, Dominação 2, Fortitude 5, Ofuscação 3, Tenebrosidade 2, Potência 1, Taumaturgia Negra 3, Vicissitude 3",
+            "vitalidade": 7,
+            "humanidade": "Trilha das Revelações Malignas: 7",
+            "forca_de_vontade": 8,
+            "reserva_padrao": "11 dados para Força+Armas Brancas; 9 dados em Carisma+Ocultismo/Liderança.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Possui Investimentos Demoníacos: Rastreador psíquico, Teleporte e Bidimensional. Olhos azuis cobertos por longos cabelos loiros, vestindo sobretudos negros.
+
+CITAÇÃO: 'A água é o fogo do inferno. Gostaria de dar um mergulho?'
+DICAS DE INTERPRETAÇÃO: Hesita entre o silencioso taciturno e o intenso extrovertido. Repreenda qualquer um que encarar.
+REFÚGIO: Escolas, faculdades e topo de elevadores.
+RUMORES: Você rouba almas (F); Você detesta os Tremere (V); Você tem alianças com demônios (V); Você preda exclusivamente mulheres (F)."""
+        },
+
+        "Ferox": {
+            "edicao": "Red List / V20",
+            "descricao": "Gárgula de 8ª Geração imbuído de Fé Verdadeira absurda. Fanático caçador de pecadores.",
+            "atributos": {
+                "Força": 5, "Destreza": 5, "Vigor": 5,
+                "Carisma": 5, "Manipulação": 3, "Aparência": 0,
+                "Percepção": 5, "Inteligência": 4, "Raciocínio": 5
+            },
+            "habilidades": {
+                "Prontidão": 3, "Briga": 5, "Diplomacia": 4, "Esquiva": 4, "Empatia": 3,
+                "Intimidação": 4, "Instrução": 3, "Liderança": 5, "Manha": 2, "Empatia c/ Animais": 3,
+                "Escalar": 2, "Interrogação": 3, "Meditação": 3, "Armas Brancas": 5, "Investigação": 3,
+                "Furtividade": 5, "História da Arte": 2, "Arquitetura": 5, "Burocracia": 5,
+                "História": 3, "Direito": 2, "Linguística": 5, "Literatura": 5, "Teologia": 5
+            },
+            "disciplinas": "Animalismo 4, Auspícios 2, Rapidez 4, Dominação 3, Fortitude 5, Obeah 4, Ofuscação 2, Potência 5, Metamorfose 2, Viceratika 5",
+            "vitalidade": 7,
+            "humanidade": 9,
+            "forca_de_vontade": 10,
+            "reserva_padrao": "10 dados em Força+Briga / Armas Brancas / Furtividade / Teologia; Fé Verdadeira nível 9.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Gárgula de asas imensas, pele branca e olhos albinos que brilham com a luz de sua Fé Verdadeira (nível 9). Usa óculos escuros e túnica com crucifixo. Nenhum vampiro comum consegue se aproximar dele devido à sua fé santa.
+
+CITAÇÃO: 'Deus é o único ser que não bebe sangue. Obedeça a lei de Deus para que Ele não envie seu julgamento.'
+DICAS DE INTERPRETAÇÃO: Entristecido com a corrupção do mundo. Paciente com neófitos. Ajuste os óculos o tempo todo.
+REFÚGIO: Sempre igrejas.
+RUMORES: A luz dos seus olhos queima vampiros (F); Os Baali o criaram (F); Você tem uma vendetta contra os Nosferatu (V)."""
+        },
+
+        "Alexis Sorokin": {
+            "edicao": "Red List / V20",
+            "descricao": "Ravnos de 6ª Geração. Mestra dos disfarces, falsificações e invasões tecnológicas.",
+            "atributos": {
+                "Força": 5, "Destreza": 7, "Vigor": 5,
+                "Carisma": 7, "Manipulação": 7, "Aparência": 6,
+                "Percepção": 6, "Inteligência": 6, "Raciocínio": 6
+            },
+            "habilidades": {
+                "Atuar": 4, "Prontidão": 4, "Esportes": 3, "Briga": 2, "Esquiva": 3, "Manha": 5,
+                "Acrobacia": 6, "Alteração Corporal": 5, "Subornar": 4, "Disfarce": 7, "Etiqueta": 5,
+                "Escapologia": 6, "Tagarelar": 5, "Falsificação": 3, "Destrancar": 6, "Performance": 3,
+                "Mão Leve": 4, "Segurança": 5, "Computador": 6, "Criminologia": 5, "Criptografia": 4
+            },
+            "disciplinas": "Auspícios 4, Rapidez 5, Quimerismo 6, Dominação 3, Fortitude 2, Ofuscação 6, Presença 3, Metamorfose 5, Quietus 1, Vicissitude 2",
+            "vitalidade": 7,
+            "humanidade": 6,
+            "forca_de_vontade": 8,
+            "reserva_padrao": "14 dados em Disfarce / Destrancar / Computador; 13 dados em Atuar/Acrobacia/Tagarelar.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Aparente ruiva esguia de olhos verdes que adora personificar celebridades (especialmente Marilyn Monroe) através de Disfarce e Vicissitude. Possui humor perverso e recursos massivos.
+
+CITAÇÃO: 'Ah não seja tão modesto. Aquilo foi realmente brilhante de sua parte.'
+DICAS DE INTERPRETAÇÃO: Brilhe com classe e elegância enquanto prega peças e golpes geniais."""
+        },
+
+        "Germaine": {
+            "edicao": "Red List / V20",
+            "descricao": "Brujah de 6ª Geração ('Conde Germaine'). Provocador beligerante e líder Anarquista.",
+            "atributos": {
+                "Força": 4, "Destreza": 6, "Vigor": 5,
+                "Carisma": 7, "Manipulação": 4, "Aparência": 4,
+                "Percepção": 3, "Inteligência": 5, "Raciocínio": 5
+            },
+            "habilidades": {
+                "Atuar": 2, "Esquiva": 5, "Empatia": 3, "Liderança": 3, "Manha": 4,
+                "Boemia": 5, "Debate": 3, "Etiqueta": 5, "Tagarelar": 7, "Máscara": 3,
+                "Furtividade": 4, "Política": 4
+            },
+            "disciplinas": "Auspícios 2, Rapidez 6, Dominação 2, Fortitude 6, Ofuscação 5, Potência 4, Presença 6",
+            "vitalidade": 7,
+            "humanidade": 5,
+            "forca_de_vontade": 7,
+            "reserva_padrao": "14 dados em Carisma+Tagarelar; 13 dados em Presença/Esquiva/Boemia.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Homem modesto, tatuado e sem camisa. Com o 6º nível de Presença, Germaine induz frenesi e fúria incontrolável nas multidões à sua volta.
+
+CITAÇÃO: 'Se eu me importasse com o que você pensa, teria perguntado, seu filho da puta.'
+DICAS DE INTERPRETAÇÃO: Beligerante por satisfação. Finge não entender frases só para imputar ofensas e iniciar brigas."""
+        },
+
+        "Tariq": {
+            "edicao": "Red List / V20",
+            "descricao": "Assamita de 5ª Geração ('O Silencioso'). Assassino lendário que teve a língua decepada.",
+            "atributos": {
+                "Força": 7, "Destreza": 8, "Vigor": 6,
+                "Carisma": 5, "Manipulação": 5, "Aparência": 5,
+                "Percepção": 7, "Inteligência": 6, "Raciocínio": 8
+            },
+            "habilidades": {
+                "Prontidão": 7, "Esportes": 6, "Briga": 8, "Esquiva": 6, "Intimidação": 4,
+                "Vasculhar": 6, "Acrobacia": 3, "Escalar": 5, "Disfarce": 6, "Armas de Fogo": 6,
+                "Meditação": 5, "Armas Brancas": 8, "Segurança": 6, "Furtividade": 7, "Ocultismo": 5
+            },
+            "disciplinas": "Auspícios 4, Rapidez 3, Fortitude 4, Ofuscação 6, Potência 3, Metamorfose 5, Quietus 8, Viceratika 3",
+            "vitalidade": 7,
+            "humanidade": 5,
+            "forca_de_vontade": 8,
+            "reserva_padrao": "16 dados em Destreza+Armas Brancas / Furtividade / Briga; Quietus 8 reduz Atributos e rouba sangue à distância.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Figura negra impressionante de olhos claros. Sua Ofuscação 6 bloqueia telepatia. Quietus 8 permite drenar sangue sem toque na pele e reduzir atributos mentais das vítimas.
+
+CITAÇÃO: (Nenhuma, a língua de Tariq foi decepada).
+DICAS DE INTERPRETAÇÃO: Escute os outros em silêncio absoluto e decida se deve matar ou ir embora."""
+        },
+
+        "Maior": {
+            "edicao": "Red List / V20",
+            "descricao": "Tremere de 7ª Geração ('Olho-Estranho'). Mestre em feitiçaria e rituais proibidos.",
+            "atributos": {
+                "Força": 5, "Destreza": 6, "Vigor": 7,
+                "Carisma": 6, "Manipulação": 8, "Aparência": 4,
+                "Percepção": 6, "Inteligência": 8, "Raciocínio": 6
+            },
+            "habilidades": {
+                "Briga": 3, "Esquiva": 5, "Empatia": 3, "Intimidação": 4, "Intriga": 6,
+                "Liderança": 4, "Instruir": 5, "Herbalismo": 4, "Pesquisa": 6, "Alquimia": 4,
+                "História": 5, "Cultura da Família": 5, "Linguística": 8, "Ocultismo": 7
+            },
+            "disciplinas": "Auspício 7, Rapidez 1, Daimoinon 5, Dominação 6, Fortitude 3, Necromancia 4, Ofuscação 2, Tenebrosidade 3, Presença 3, Taumaturgia 8",
+            "vitalidade": 7,
+            "humanidade": 4,
+            "forca_de_vontade": 9,
+            "reserva_padrao": "15 dados em Inteligência+Ocultismo / Pesquisa; Dominação 6 funciona através de gravações de vídeo e áudio.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Possui olhos heterocromáticos (um azul e outro castanho). Auspícios 7 prevê eventos e detecta invisibilidade mística. Dominação 6 permite dominar pessoas que escutem sua voz gravada.
+
+CITAÇÃO: 'Você pensa que a aposta vale a pena? Vá em frente, pense nisso.'
+DICAS DE INTERPRETAÇÃO: Balance a cabeça como se ouvisse uma música enlouquecedora. Murmure sozinho."""
+        },
+
+        "Petaniqua": {
+            "edicao": "Red List / V20",
+            "descricao": "Malkaviana de 5ª Geração (Mãe de Alexandre, o Grande). Xamã sombria e manipuladora de espíritos.",
+            "atributos": {
+                "Força": 6, "Destreza": 6, "Vigor": 8,
+                "Carisma": 5, "Manipulação": 7, "Aparência": 6,
+                "Percepção": 5, "Inteligência": 7, "Raciocínio": 8
+            },
+            "habilidades": {
+                "Briga": 6, "Esquiva": 7, "Sonhar": 6, "Intimidação": 3, "Intriga": 5,
+                "Liderança": 6, "Manha": 6, "Subterfúgio": 7, "Herbalismo": 6, "Hipnotismo": 7,
+                "Armas Brancas": 5, "Alquimia": 5, "Ocultismo": 6, "Conhecimento Espiritual": 5
+            },
+            "disciplinas": "Auspícios 6, Quimerismo 5, Demência 7, Dominação 4, Ofuscação 5, Metamorfose 4, Taumaturgia 7, Vicissitude 2",
+            "vitalidade": 7,
+            "humanidade": 2,
+            "forca_de_vontade": 8,
+            "reserva_padrao": "14 dados em Subterfúgio/Hipnotismo/Esquiva; Demência 7 induz loucura permanente e transforma vítimas em assassinos.",
+            "texto_livro": """DETALHES DO ANÁTEMA:
+Move-se como rainha, usando ossos, chocalhos e crânios de cascavel no cabelo. Auspícios 6 enxerga o mundo espiritual da Umbra. Demência 7 implanta perturbações incuráveis instantâneas.
+
+CITAÇÃO: 'Eu já fui a rainha do mundo, e serei novamente eu te prometo. Agora você tem minha permissão para morrer.'
+DICAS DE INTERPRETAÇÃO: Esnobe ao extremo, alternando para a rotina assombrosa de uma curandeira xamã."""
+        }
+    }
+}

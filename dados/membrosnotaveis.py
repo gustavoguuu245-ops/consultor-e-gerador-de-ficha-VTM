@@ -1,0 +1,24 @@
+
+
+NPCS_BASE = {
+    "Príncipes e Notáveis da Camarilla": {
+        "Príncipe Camarilla Padrão": {
+            "edicao": "3ª Edição / V20",
+            "descricao": "Governante absoluto do domínio com décadas ou séculos de manipulação política.",
+            "atributos": {
+                "Força": 3, "Destreza": 3, "Vigor": 4,
+                "Carisma": 4, "Manipulação": 5, "Aparência": 3,
+                "Percepção": 4, "Inteligência": 4, "Raciocínio": 4
+            },
+            "habilidades": {
+                "Liderança": 4, "Política": 5, "Etiqueta": 4, "Lábia": 4, "Intimidação": 4, "Ocultismo": 3
+            },
+            "disciplinas": "Dominação 4, Presença 4, Auspícios 3, Fortitude 2",
+            "vitalidade": 7,
+            "humanidade": 4,
+            "forca_de_vontade": 8,
+            "reserva_padrao": "9 dados em Testes de Política/Liderança/Dominação; 8 dados em Intimidação.",
+            "texto_livro": "O Príncipe detém o direito de vida e morte (A Tradição da Destruição) sobre todos os Cainitas no seu Domínio."
+        }
+    }
+}
