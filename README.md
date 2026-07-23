@@ -1,6 +1,3 @@
-
-readme_content = """# 🦇 VTM Quick Ref
-
 > **BETA** — Banco de fichas canônicas + Gerador de NPCs para narradores de **Vampiro: A Máscara**
 
 ---
@@ -33,17 +30,16 @@ Esse programa resolve isso em **1 segundo**.
 
 ### Opção 1: Executável (mais fácil)
 
-1. Baixa a última release em [Releases](../../releases)
+1. Baixa
 2. Descompacta
-3. Clica duas vezes em `VTM_QuickRef.exe`
+3. Clica duas vezes 
 4. Pronto
 
-### Opção 2: Rodar o código (se manja de Python)
+### Opção 2: Rodar o código (se quiser atualizar ou modificar em Python)
 
 ```bash
 # Clona o repositório
-git clone https://github.com/seu-usuario/vtm-quick-ref.git
-cd vtm-quick-ref
+git clone https://github.com/seu-usuario/consultor-e-gerador-de-ficha-VTM.git
 
 # Instala dependências
 pip install -r requirements.txt
@@ -59,7 +55,7 @@ python main_app.py
 ## 📂 Estrutura do projeto
 
 ```
-vtm-quick-ref/
+vtm
 ├── main_app.py              # Aplicação principal (interface)
 ├── motor/
 │   ├── dice_engine.py       # Rolador D10 Storyteller
@@ -88,7 +84,7 @@ vtm-quick-ref/
 
 ### Consultar um NPC existente
 
-1. Digita o nome, clã ou conceito na busca
+1. Digita o nome
 2. Seleciona na lista
 3. A ficha completa aparece no painel direito
 4. Clique em **"Ver Lore"** para o texto integral do livro
@@ -178,7 +174,3 @@ O `__init__.py` carrega automaticamente todos os arquivos `.py` da pasta `dados/
 > *"A Máscara deve ser preservada. Mas as fichas dos NPCs não precisam ficar escondidas."*
 
 🦇 **Sangue e vitae. Bom jogo, narradores.**
-
-
-print("README.md criado com sucesso!")
-print(f"Tamanho: {len(readme_content)} caracteres")
