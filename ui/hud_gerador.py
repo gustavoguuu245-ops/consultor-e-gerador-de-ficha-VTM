@@ -18,7 +18,11 @@ except ImportError:
         gerar_ficha, formatar_ficha_texto, REGRAS, CLAS,
         EDICOES, NATUREZAS, CONCEITOS
     )
-     
+
+# Importar o banco de dados unificado de NPCs
+from dados import carregar_npcs_base
+NPCS_BASE = carregar_npcs_base()
+
 CORES = {
     "bg_principal": "#0a0a0c",
     "bg_card": "#111115",

@@ -1,13 +1,7 @@
 import os
 import json
-import sys
 
-def obter_caminho_base() -> str:
-    """Retorna o caminho base correto seja rodando em script ou
-    como executável (.exe)"""
-    if getattr(sys, 'frozen', False):
-        return sys._MEIPASS
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from utils import CAMINHO_BASE
 
 
 def carregar_npcs_base() -> dict:
@@ -15,10 +9,7 @@ def carregar_npcs_base() -> dict:
     """
     base_unificada: dict = {}
 
-    pasta_dados: str = os.path.join(os.getcwd(), "dados", "npcs_base")
-    if not os.path.exists(pasta_dados) or getattr(sys, 'frozen', False) is True:
-        pasta_dados = os.path.join(sys._MEIPASS, "dados", "npcs_base")
-
+    pasta_dados: str = os.path.join(CAMINHO_BASE, "dados", "npcs_base")
     if not os.path.exists(pasta_dados):
         print("Aviso: retornando pasta de NPCs vazia")
         return base_unificada
@@ -70,10 +61,7 @@ def carregar_icones(categorias:list|str|None) -> dict:
     if isinstance(categorias, str):
         categorias = [categorias]
 
-    pasta_dados: str = os.path.join(os.getcwd(), "dados", "icones")
-    if not os.path.exists(pasta_dados) or getattr(sys, 'frozen', False) is True:
-        pasta_dados = os.path.join(sys._MEIPASS, "dados", "icones")
-
+    pasta_dados: str = os.path.join(CAMINHO_BASE, "dados", "icones")
     lista_arquivos:list = [
         e
         for e in os.listdir(pasta_dados)
@@ -115,4 +103,31 @@ def carregar_icones(categorias:list|str|None) -> dict:
     return resultado
 
 
-    
+def carregar_disciplinas(categorias:list|str|None) -> dict:
+    if isinstance(categorias, str):
+        categorias = [categorias]
+
+    pasta_dados: str = os.path.join(CAMINHO_BASE, "dados", "disciplinas")
+    lista_arquivos:list = [
+        e
+        for e in os.listdir(pasta_dados)
+        if e.endswith('.json')
+        and os.path.isfile(os.path.join(pasta_dados, e))
+    ]
+
+    resultado:dict = {}
+    for arquivo in pasta_dados:
+        caminho_arquivo: str = os.path.join(pasta_dados, arquivo)
+        try:
+            with open(caminho_arquivo, 'r', encoding="utf-8") as f:
+                dados = json.load(f)
+                if not dados:
+                    return {}
+        except Exception:
+            continue
+        for k, v in dados.items():
+            if categorias is None or k in categorias:
+                resultado[k] = v
+
+    return resultado
+
