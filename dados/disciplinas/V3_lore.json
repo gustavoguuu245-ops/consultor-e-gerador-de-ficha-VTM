@@ -1,0 +1,157 @@
+{
+    "lore": {
+        "Animalismo": {
+            "perfil": "Dominio sobre feras e a Besta. Permite comandar animais, acalmar o Frenesi e ate projetar a mente em criaturas selvagens.",
+            "tags": [
+                "USO_ANIMAIS",
+                "CONTROLE_FRENESI",
+                "SABOTAGEM_REBANHO",
+                "INFORMACOES_NATUREZA"
+            ]
+        },
+        "Auspicios": {
+            "perfil": "Sentidos divinos e percepcao extra-sensorial. Ve auras, le a historia de objetos e projeta a consciencia pelo Cordao de Prata.",
+            "tags": [
+                "REVELAR_OFUSCACAO",
+                "PROCURAR_SEGREDOS",
+                "CONTRA_INTRIGA",
+                "AVISO_EMBOSCADA"
+            ]
+        },
+        "Demencia": {
+            "perfil": "A loucura mistica do cla Malkaviano. Incendeia paixoes sutis, distorce a percepcao da realidade e causa visoes de pesadelo.",
+            "tags": [
+                "ATAQUE_MENTAL",
+                "CAOS_POLITICO",
+                "SABOTAGEM_CORTE",
+                "DESESTABILIZAR_ALVO"
+            ]
+        },
+        "Dominacao": {
+            "perfil": "Escravidao mental e controle da vontade alheia atraves do olhar. Comandos diretos, alteracao de memorias e possessao.",
+            "tags": [
+                "CONTROLE_MENTAL",
+                "ABAFA_MASCARADA",
+                "MODIFICA_MEMORIA",
+                "FORCAR_LEALDADE"
+            ]
+        },
+        "Fortitude": {
+            "perfil": "Resistencia fisica sobrenatural. Concede aos Cainitas a capacidade de ignorar impactos fisicos violentos, Fogo e ate a Luz do Sol.",
+            "tags": [
+                "RESISTENCIA_DANO",
+                "SOBREVIVER_EMBOSCADA",
+                "IMUNIDADE_FOGO",
+                "DEFESA_PASSIVA"
+            ]
+        },
+        "Metamorfose": {
+            "perfil": "Mestria da transformacao fisica do Sangue (Gangrel). Olhos de predador, garras letais, metamorfose em feras ou fusao com a terra.",
+            "tags": [
+                "COMBATE_ANIMAL",
+                "FUGA_EMERGENCIAL",
+                "FURTIVIDADE_BRUTA",
+                "SOBREVIVENCIA"
+            ]
+        },
+        "Mortis": {
+            "perfil": "Alquimia negra da morte e decomposicao (Cappadocian/Giovanni). Mumifica alvos, murcha membros em combate e ergue cadaveres.",
+            "tags": [
+                "ATAQUE_DEGRADANTE",
+                "CONTROLE_CADAVERES",
+                "EVENTO_TERROR",
+                "NECROMANCIA"
+            ]
+        },
+        "Ofuscacao": {
+            "perfil": "Ocultamento mental. O vampiro nao fica invisivel fisicamente, mas engana as mentes ao redor para que ignorem sua presenca e rosto.",
+            "tags": [
+                "OCULTAMENTO",
+                "FUGIR_INQUISICAO",
+                "INFILTRACAO_SILENCIOSA",
+                "ESPIONAGEM"
+            ]
+        },
+        "Potencia": {
+            "perfil": "Vigor e forca fisica titanica. Concede capacidade para esmagar estruturas de aco, quebrar ossos e saltar distancias absurdas.",
+            "tags": [
+                "COMBATE_BRUTO",
+                "DANO_MASSIVO",
+                "DESTRUIR_BARREIRAS",
+                "FORCA_PUREZA"
+            ]
+        },
+        "Presenca": {
+            "perfil": "Magnetismo pessoal avassalador. Atrai multidoes, inspira adoracao cega, causa transe ou gera panico paralisante em area.",
+            "tags": [
+                "DIPLOMACIA_MASSA",
+                "EVITAR_COMBATE",
+                "CHARME_ELISEU",
+                "PRODUCAO_INFLUENCIA"
+            ]
+        },
+        "Quietus": {
+            "perfil": "A arte mortal dos assassinos Banu Haqim (Assamitas). Cria zonas de silencio, envenena o proprio sangue e degrada o corpo da vitima.",
+            "tags": [
+                "ASSASSINATO_SILENCIOSO",
+                "VENENO_SANGUINEO",
+                "SABOTAGEM_LIDER",
+                "DANO_LETAL"
+            ]
+        },
+        "Quimerismo": {
+            "perfil": "A feiticaria das ilusoes do cla Ravnos. Cria imagens, sons, odores e alucinacoes taticas capazes de enganar sentidos e causar dano.",
+            "tags": [
+                "DISTRACAO_MASCARADA",
+                "ENGANAR_SENTIDOS",
+                "ILUSAO_COMBATE",
+                "ALUCINACAO"
+            ]
+        },
+        "Rapidez": {
+            "perfil": "Velocidade reflexiva sobre-humana. Permite mover-se a velocidades imperceptiveis e realizar multiplas acoes de combate por turno.",
+            "tags": [
+                "MULTIPLOS_ATAQUES",
+                "ESQUIVA_MAXIMA",
+                "INICIATIVA_TURNO",
+                "VELOCIDADE_PURA"
+            ]
+        },
+        "Serpentis": {
+            "perfil": "Segredos ancestrais do cla Seguidores de Set. Olhos hipnoticos, lingua bifurcada, transformacao em serpente e remocao do coracao.",
+            "tags": [
+                "HIPNOSE_SANGUE",
+                "PARALISIA_OLHAR",
+                "MUTACAO_OFIDICA",
+                "CORRUPCAO"
+            ]
+        },
+        "Taumaturgia": {
+            "perfil": "A feiticaria de sangue hermetica do cla Tremere. Manipula as propriedades magicas do Vitae, invoca fogo e controla os elementos.",
+            "tags": [
+                "MAGIA_SANGUE",
+                "BOLA_FOGO",
+                "ROUBO_VITAE",
+                "DEFESA_OCULTA"
+            ]
+        },
+        "Tenebrosidade": {
+            "perfil": "Manipulacao da materia escura do Abismo (Lasombra). Controla sombras vivas, invoca tentaculos estranguladores e assume forma abissal.",
+            "tags": [
+                "ZONA_ESCURIDAO",
+                "MEDO_SISTEMICO",
+                "TIRAR_VISAO",
+                "TENTACULOS_ABISMO"
+            ]
+        },
+        "Vicissitude": {
+            "perfil": "Arte grotesca da escultura de carne e osso (Tzimisce). Altera feicoes humanas, molda ossos em armas e assume a horripilante Forma de Zulo.",
+            "tags": [
+                "MUTILACAO_FISICA",
+                "MODIFICAR_APARENCIA",
+                "CRIAR_MONSTROS",
+                "ARMAS_OSSEAS"
+            ]
+        }
+    }
+}

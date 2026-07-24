@@ -19,13 +19,8 @@ except ImportError:
     )
 
 # Importar o banco de dados unificado de NPCs
-try:
-    from dados import NPCS_BASE
-except ImportError:
-    try:
-        from dados.npcsgenericos import NPCS_BASE
-    except ImportError:
-        NPCS_BASE = {}
+from dados import carregar_npcs_base
+NPCS_BASE = carregar_npcs_base()
 
 CORES = {
     "bg_principal": "#0a0a0c",
