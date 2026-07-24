@@ -116,7 +116,7 @@ def carregar_disciplinas(categorias:list|str|None) -> dict:
     ]
 
     resultado:dict = {}
-    for arquivo in pasta_dados:
+    for arquivo in lista_arquivos:
         caminho_arquivo: str = os.path.join(pasta_dados, arquivo)
         try:
             with open(caminho_arquivo, 'r', encoding="utf-8") as f:
