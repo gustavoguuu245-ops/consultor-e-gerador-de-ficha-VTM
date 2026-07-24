@@ -167,7 +167,8 @@ class AppGerenciadorNPC:
             cursor="hand2", bd=0, padx=6, pady=4
         )
         btn_disciplinas.pack(fill=tk.X, padx=8, pady=(0, 4))
-                # Button de gerador de ficha
+
+        # Button de gerador de ficha
         btn_gerador = tk.Button(
             left_panel, 
             text="🎲 Gerador de Fichas (3a Ed / DA)", 
