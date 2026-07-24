@@ -1,47 +1,115 @@
 import os
-import importlib
+import json
 import sys
 
-def obter_caminho_base():
-    """Retorna o caminho base correto seja rodando em script ou como executavel (.exe)"""
+def obter_caminho_base() -> str:
+    """Retorna o caminho base correto seja rodando em script ou
+    como executável (.exe)"""
     if getattr(sys, 'frozen', False):
-     
         return sys._MEIPASS
-    
-
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-def carregar_tudo():
-    base_unificada = {}
-    
 
-    if getattr(sys, 'frozen', False):
-     
-        pasta_atual = os.path.join(sys._MEIPASS, "dados")
-    else:
+def carregar_npcs_base() -> dict:
+    """Carrega todos os arquivos JSON da pasta de dados estaticos de NPC
+    """
+    base_unificada: dict = {}
 
-        pasta_atual = os.path.dirname(__file__)
+    pasta_dados: str = os.path.join(os.getcwd(), "dados", "npcs_base")
+    if not os.path.exists(pasta_dados) or getattr(sys, 'frozen', False) is True:
+        pasta_dados = os.path.join(sys._MEIPASS, "dados", "npcs_base")
 
-   
-    if not os.path.exists(pasta_atual):
+    if not os.path.exists(pasta_dados):
+        print("Aviso: retornando pasta de NPCs vazia")
         return base_unificada
 
-    # Percorre todos os arquivos .py da pasta dados
-    for arquivo in os.listdir(pasta_atual):
-        if arquivo.endswith(".py") and not arquivo.startswith("__"):
-            nome_modulo = arquivo[:-3]
-            try:
-                mod = importlib.import_module(f"dados.{nome_modulo}")
-                db = getattr(mod, 'NPCS_BASE', None)
-                
-                if isinstance(db, dict):
-                    for cat, npcs in db.items():
-                        if cat not in base_unificada:
-                            base_unificada[cat] = {}
+    lista_arquivos: list = [
+        e 
+        for e in os.listdir(pasta_dados)
+        if os.path.isfile(os.path.join(pasta_dados, e))
+        and e.endswith(".json")
+
+    ]
+
+    # Percorre todos os arquivos .json da pasta dados
+    for arquivo in lista_arquivos:
+        caminho_arquivo = os.path.join(pasta_dados, arquivo)
+        try:
+            with open(caminho_arquivo, 'r', encoding='utf-8') as f:
+                db = json.load(f)
+            
+            if isinstance(db, dict):
+                for cat, npcs in db.items():
+                    if cat in base_unificada:
                         base_unificada[cat].update(npcs)
-            except Exception as e:
-                print(f"Aviso: Não foi possível carregar 'dados/{arquivo}': {e}")
+                    else:
+                        base_unificada[cat] = npcs
+        except Exception as e:
+            print(f"Aviso: Não foi possível carregar 'dados/{arquivo}': {e}")
 
     return base_unificada
 
-NPCS_BASE = carregar_tudo()
+
+def carregar_icones(categorias:list|str|None) -> dict:
+    def _carrega_arquivo(caminho:str, categorias:list|None) -> dict:
+        resultado:dict = {}
+        try:
+            with open(caminho, 'r', encoding="utf-8") as f:
+                dados = json.load(f)
+                if not dados:
+                    return {}
+        except Exception:
+            return {}
+        for k, v in dados.items():
+            if categorias is None or k in categorias:
+                resultado[k] = v
+        return resultado
+
+    resultado: dict = {}
+
+    if isinstance(categorias, str):
+        categorias = [categorias]
+
+    pasta_dados: str = os.path.join(os.getcwd(), "dados", "icones")
+    if not os.path.exists(pasta_dados) or getattr(sys, 'frozen', False) is True:
+        pasta_dados = os.path.join(sys._MEIPASS, "dados", "icones")
+
+    lista_arquivos:list = [
+        e
+        for e in os.listdir(pasta_dados)
+        if e.endswith('.json')
+        and os.path.isfile(os.path.join(pasta_dados, e))
+    ]
+    
+    # carregamos primeiro os arquivos que tem _base...
+    lista_prioridades:list = [
+        e
+        for e in lista_arquivos
+        if "_base" in e
+    ]
+    for e in lista_prioridades:
+        caminho_arquivo: str = os.path.join(pasta_dados, e)
+        novos_dados: dict = _carrega_arquivo(caminho_arquivo, categorias)
+        for k, v in novos_dados.items():
+            if k not in resultado:
+                resultado[k] = v
+            else:
+                resultado[k] = v
+
+    # e agora todos os outros arquivos.
+    # Assim, no futuro, podemos permitir que o usuário customize icones
+    lista_customizados: list = [
+        e
+        for e in lista_arquivos
+        if e not in lista_prioridades
+    ]
+    for e in lista_customizados:
+        caminho_arquivo: str = os.path.join(pasta_dados, e)
+        novos_dados: dict = _carrega_arquivo(caminho_arquivo, categorias)
+        for k, v in novos_dados.items():
+            if k not in resultado:
+                resultado[k] = v
+            else:
+                resultado[k] = v
+
+    return resultado

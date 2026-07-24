@@ -1,0 +1,38 @@
+
+{
+    "npc": {
+        "anarch": "🏴",
+        "assamita": "🐕",
+        "brujah": "⚔",
+        "campones": "🌾",
+        "capanga": "🔪",
+        "default": "📋",
+        "detetive": "🕵",
+        "fada": "🧚",
+        "fantasma": "👻",
+        "gangrel": "🐺",
+        "gangue": "🟠",
+        "garcom": "🍽",
+        "ghoul": "🩸",
+        "hacker": "💻",
+        "humano": "👤",
+        "inquisidor": "✝",
+        "lasombra": "🌑",
+        "lobisomem": "🐺",
+        "mago": "🔮",
+        "malkaviano": "🌙",
+        "nosferatu": "💀",
+        "notavel": "⭐",
+        "policial": "👮",
+        "principe": "👑",
+        "ravnos": "✨",
+        "redlist": "🔴",
+        "seguranca": "🛡",
+        "setita": "🐍",
+        "toreador": "🎭",
+        "tremere": "👁",
+        "tzimisce": "🦎",
+        "vampiro": "🦇",
+        "ventrue": "👑"
+    }
+}

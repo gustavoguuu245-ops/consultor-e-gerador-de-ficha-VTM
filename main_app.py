@@ -2,53 +2,29 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import os
 import re
+
 from PIL import Image, ImageTk
+
 from ui.hud_disciplina import HUDDisciplinas
 from ui.hud_gerador import HUDGeradorFicha
+from ui.constantes import CORES
+
 from motor.savenpcsgerados import carregar_npcs_salvos
 
-try:
-    from dados import NPCS_BASE
-except ImportError:
-    from dados.npcsgenericos import NPCS_BASE
+from dados import carregar_npcs_base, carregar_icones
 
 from motor.dice_engine import rolar_dados
 
 # ============================================================
-# CONFIGURACOES DE CORES E ESTILOS aqui tu pode mudar as cores
 
-CORES = {
-    "bg_principal": "#0a0a0c",
-    "bg_card": "#111115",
-    "bg_input": "#0d0d11",
-    "bg_header": "#1a0000",
-    "vermelho_sangue": "#660000",
-    "vermelho_destaque": "#cc0000",
-    "vermelho_claro": "#ff4444",
-    "texto_principal": "#e0e0e0",
-    "texto_secundario": "#888888",
-    "texto_dourado": "#ffcc00",
-    "borda_padrao": "#333333",
-    "verde_sucesso": "#00ff88",
-    "amarelo_atencao": "#ffaa44",
-    "vermelho_falha": "#ff4444",
-}
-
-ICONES_NPC = {
-    "vampiro": "🦇", "tremere": "👁", "gangrel": "🐺", "toreador": "🎭",
-    "nosferatu": "💀", "brujah": "⚔", "ventrue": "👑", "setita": "🐍",
-    "malkaviano": "🌙", "tzimisce": "🦎", "assamita": "🐕", "lasombra": "🌑",
-    "ravnos": "✨", "humano": "👤", "policial": "👮", "detetive": "🕵",
-    "garcom": "🍽", "campones": "🌾", "hacker": "💻", "seguranca": "🛡",
-    "capanga": "🔪", "gangue": "🟠", "ghoul": "🩸", "lobisomem": "🐺",
-    "mago": "🔮", "fantasma": "👻", "fada": "🧚", "principe": "👑",
-    "notavel": "⭐", "redlist": "🔴", "inquisidor": "✝", "anarch": "🏴",
-    "default": "📋"
-}
+ICONES_NPC = carregar_icones(categorias=['npc'])['npc']
 
 
-
-def obter_icone_npc(npc_nome, categoria, data):
+# TODO: colocar atributos secundários como opcional para determinaçao de icone
+# ex: nem todo personagem que tem taumaturgia é tremere ou deveria ter esse icone
+# TODO: colocar um atributo de icone no NPC, para o usuario poder forçar um icone
+# TODO: usar mais icones, expandindo além dos emoji (permitir simbolos de clã, por exemplo)
+def obter_icone_npc(npc_nome:str, categoria:str, data:dict) -> str:
     nome_lower = npc_nome.lower()
     desc_lower = data.get("descricao", "").lower()
     cat_lower = categoria.lower()
@@ -135,7 +111,8 @@ class AppGerenciadorNPC:
         self.npcs_encontro = []
         
         self.carregar_assets()
-        carregar_npcs_salvos(NPCS_BASE) # < Carregar os Npcs salvos pelo usuario 
+        self.npcs_base = carregar_npcs_base()
+        self.npcs_base.update(carregar_npcs_salvos())
         self.setup_ui()
 
         
@@ -226,7 +203,7 @@ class AppGerenciadorNPC:
         self.combo_categoria = ttk.Combobox(
             left_panel, 
             state="readonly", 
-            values=["TODAS AS CATEGORIAS"] + list(NPCS_BASE.keys())
+            values=["TODAS AS CATEGORIAS"] + list(self.npcs_base.keys())
         )
         self.combo_categoria.set("TODAS AS CATEGORIAS")
         self.combo_categoria.pack(fill=tk.X, padx=8, pady=(1, 4))
@@ -380,7 +357,7 @@ class AppGerenciadorNPC:
 
         resultados = []
 
-        for cat, npcs in NPCS_BASE.items():
+        for cat, npcs in self.npcs_base.items():
             if cat_sel != "TODAS AS CATEGORIAS" and cat != cat_sel:
                 continue
             
