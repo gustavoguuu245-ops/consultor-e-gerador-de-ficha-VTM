@@ -96,14 +96,14 @@ class AppGerenciadorNPC:
         self.root.configure(bg=CORES["bg_principal"])
         self.root.minsize(1100, 700)
 
-        self.style = ttk.Style()
-        self.style.theme_use("clam")
-        self.style.configure(".", background=CORES["bg_principal"], foreground=CORES["texto_principal"], font=("Helvetica", 9))
-        self.style.configure("TLabelframe", background=CORES["bg_card"], foreground=CORES["vermelho_destaque"], bordercolor=CORES["borda_padrao"])
-        self.style.configure("TLabelframe.Label", font=("Helvetica", 9, "bold"), foreground=CORES["vermelho_claro"], background=CORES["bg_card"])
-        self.style.configure("TButton", background="#222222", foreground="#ffffff", bordercolor="#555555", font=("Helvetica", 8, "bold"))
-        self.style.map("TButton", background=[("active", CORES["vermelho_sangue"])])
-        self.style.configure("TCombobox", fieldbackground=CORES["bg_input"], background=CORES["bg_input"], foreground=CORES["texto_principal"])
+        tk_style = ttk.Style()
+        tk_style.theme_use("clam")
+        tk_style.configure(".", background=CORES["bg_principal"], foreground=CORES["texto_principal"], font=("Helvetica", 9))
+        tk_style.configure("TLabelframe", background=CORES["bg_card"], foreground=CORES["vermelho_destaque"], bordercolor=CORES["borda_padrao"])
+        tk_style.configure("TLabelframe.Label", font=("Helvetica", 9, "bold"), foreground=CORES["vermelho_claro"], background=CORES["bg_card"])
+        tk_style.configure("TButton", background="#222222", foreground="#ffffff", bordercolor="#555555", font=("Helvetica", 8, "bold"))
+        tk_style.map("TButton", background=[("active", CORES["vermelho_sangue"])])
+        tk_style.configure("TCombobox", fieldbackground=CORES["bg_input"], background=CORES["bg_input"], foreground=CORES["texto_principal"])
 
         self.mostrar_texto_livro = tk.BooleanVar(value=False)
         self.bg_image = None
@@ -134,26 +134,25 @@ class AppGerenciadorNPC:
             self.canvas.create_image(0, 0, image=self.bg_image, anchor=tk.NW)
 
          # parte dos botoes 
-        header = tk.Label(
-            self.root, 
-            text="GERENCIADOR CANONICO DE NPCs - VAMPIRO: A MASCARA (3a ED / V20 / V5 / RED LIST)", 
-            font=("Georgia", 11, "bold"), 
-            bg=CORES["vermelho_sangue"], 
-            fg="#ffffff", 
-            pady=6
-        )
-        self.canvas.create_window(640, 18, window=header, width=1280)
+        # header = tk.Label(
+        #     self.root, 
+        #     text="GERENCIADOR CANONICO DE NPCs - VAMPIRO: A MASCARA (3a ED / V20 / V5 / RED LIST)", 
+        #     font=("Georgia", 11, "bold"), 
+        #     bg=CORES["vermelho_sangue"], 
+        #     fg="#ffffff", 
+        #     pady=6
+        # )
+        # self.canvas.create_window(640, 18, window=header, width=1280)
 
         # Container Principal expandido verticalmente
-        main_frame = tk.Frame(self.root, bg=CORES["bg_principal"], bd=1, relief=tk.RIDGE)
-        self.canvas.create_window(640, 375, window=main_frame, width=1240, height=650)
+        # main_frame = tk.Frame(self.root, bg=CORES["bg_principal"], bd=1, relief=tk.RIDGE)
+        # self.canvas.create_window(640, 375, window=main_frame)
 
         # ============================================================
         # PAINEL ESQUERDO
         
-        left_panel = tk.Frame(main_frame, bg=CORES["bg_card"], bd=1, relief=tk.SOLID, width=360)
-        left_panel.pack(side=tk.LEFT, fill=tk.Y, padx=(8, 4), pady=8)
-        left_panel.pack_propagate(False)
+        left_panel = tk.Frame(self.canvas, bg=CORES["bg_card"], bd=1, relief=tk.SOLID)
+        left_panel.place(relheight=1.0, relwidth=0.25, x=0)
         
         tk.Label(left_panel, text="ARQUIVOS DA MASCARADA", bg=CORES["bg_card"], 
                 fg=CORES["vermelho_claro"], font=("Georgia", 10, "bold"), pady=4).pack(fill=tk.X, padx=8)
@@ -267,8 +266,8 @@ class AppGerenciadorNPC:
         # ============================================================
         # PAINEL DIREITO
         
-        right_panel = tk.Frame(main_frame, bg=CORES["bg_card"], bd=1, relief=tk.SOLID)
-        right_panel.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(4, 8), pady=8)
+        right_panel = tk.Frame(self.canvas, bg=CORES["bg_card"], bd=1, relief=tk.SOLID)
+        right_panel.place(relheight=1.0, relwidth=0.75, relx=0.3)
 
         # Header do Card Superior
         self.card_header = tk.Frame(right_panel, bg=CORES["bg_header"], bd=1, relief=tk.SOLID)
