@@ -1,0 +1,22 @@
+{
+  "Guardas & Linha de Frente (V20)": {
+    "Mercenário da SchreckNET / Nosferatu": {
+      "edicao": "V20 / Dark Ages",
+      "descricao": "Defensor de nó de dados underground e especialista em segurança física/digital.",
+      "atributos": {
+        "Força": 3, "Destreza": 3, "Vigor": 4,
+        "Carisma": 1, "Manipulação": 3, "Aparência": 0,
+        "Percepção": 4, "Inteligência": 3, "Raciocínio": 3
+      },
+      "habilidades": {
+        "Computação": 4, "Briga": 3, "Armas de Fogo": 2, "Segurança": 4, "Furtividade": 4
+      },
+      "disciplinas": "Ofuscação 3, Potência 2, Animalismo 1",
+      "vitalidade": 7,
+      "humanidade": 5,
+      "forca_de_vontade": 6,
+      "reserva_padrao": "7 dados em Furtividade/Ofuscação; 7 dados em Segurança Digital.",
+      "texto_livro": "Especialistas do clã Nosferatu encarregados de defender a infraestrutura da informação Cainita contra invasões físicas e cibernéticas."
+    }
+  }
+}
