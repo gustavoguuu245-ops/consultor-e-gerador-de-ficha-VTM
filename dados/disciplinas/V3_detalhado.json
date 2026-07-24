@@ -1,0 +1,125 @@
+{
+    "detalhes": {
+        "Animalismo": [
+            "N1: Linguagem Feral - (Manipulacao + Empatia c/ Animais | Dif 6)",
+            "N2: Chamado de Noe - (Carisma + Sobrevivencia | Dif 6)",
+            "N3: Intimidar a Besta - (Manipulacao + Intimidacao | Dif 7)",
+            "N4: Cavalgar a Mente - (Carisma + Empatia c/ Animais | Dif 8)",
+            "N5: Expulsando a Besta - (Manipulacao + Empatia c/ Animais | Dif 8)",
+            "N6: Unidade Acelerada - (Percepcao + Empatia c/ Animais | Dif 6)"
+        ],
+        "Auspicios": [
+            "N1: Sentidos Agucados - (Nivel de Auspicios | Depende da distancia",
+            "N2: Visao da Alma - (Percepcao + Empatia | Dif 8)",
+            "N3: Toque do Espirito - (Percepcao + Empatia | Dif 6)",
+            "N4: Roubar Segredos - (Inteligencia + Labia | Dif Forca de Vontade do Alvo)",
+            "N5: Caminhada da Anima - (Percepcao + Ocultismo | Dif 7 - Custo: 1 FV)",
+            "N6: Visao Longinqua - (Percepcao + Empatia | Dif 6)"
+        ],
+        "Demencia": [
+            "N1: Paixao do Incubo - (Carisma + Empatia | Dif Caminho)",
+            "N2: Assombrar a Alma - (Manipulacao + Labia | Dif Percepcao+3)",
+            "N3: Visao do Caos - (Percepcao + Ocultismo | Dif 7)",
+            "N4: Confusao - (Manipulacao + Intimidacao | Dif FV do Alvo)",
+            "N5: Loucura Uivante - (Manipulacao + Intimidacao | Dif FV do Alvo)",
+            "N6: Beijo da Lua - (Manipulacao + Empatia | Dif FV do Alvo)"
+        ],
+        "Dominacao": [
+            "N1: Observancia - (Manipulacao + Intimidacao | Dif FV do Alvo)",
+            "N2: Murmurio - (Manipulacao + Lideranca | Dif FV do Alvo)",
+            "N3: Memoria do Dissoluto - (Raciocinio + Labia | Dif FV do Alvo)",
+            "N4: Isca - (Carisma + Lideranca | Dif FV do Alvo)",
+            "N5: Possessao - (Carisma + Intimidacao | Dif FV do Alvo)",
+            "N6: Fidelidade - (Carisma + Lideranca | Dif FV do Alvo)"
+        ],
+        "Fortitude": [
+            "N1 a N6: Absorcao Passiva - Adiciona dados automaticos de absorcao de dano (inclusive Letal, Agravado, Fogo e Luz do Sol)."
+        ],
+        "Metamorfose": [
+            "N1: Testemunha - (Visao Noturna Automatica)",
+            "N2: Garras da Besta - (1 Ponto de Sangue | Causa Dano Agravado)",
+            "N3: Enterrado com a Terra - (1 Ponto de Sangue | Fusao com o Solo)",
+            "N4: Forma da Besta - (1 Ponto de Sangue | Transformacao em Lobo/Morcego)",
+            "N5: Corpo Espiritual - (1 Ponto de Sangue | Transformacao em Nevoa Imaterial)",
+            "N6: Sono Tranquilo - (4 Pontos de Sangue | Descanso em Forma de Nevoa)"
+        ],
+        "Mortis": [
+            "N1: Mascara da Morte - (Vigor + Medicina | Dif 6)",
+            "N2: Murchar - (Manipulacao + Medicina | Dif FV do Alvo)",
+            "N3: Despertar - (Forca de Vontade | Dif 10 - Caminho)",
+            "N4: Sussurros do Tumulo - (Estado de Rigor Mortis/Transe)",
+            "N5: Morte Negra - (Vigor + Ocultismo | Dif FV do Alvo)",
+            "N6: Vigor Mortis - (3 Sangues | Animacao de Zumbi Cadaverico)"
+        ],
+        "Ofuscacao": [
+            "N1: Manto das Sombras - (Imobilidade Oculta Automatica)",
+            "N2: Presenca Invisivel - (Raciocinio + Furtividade | Dif 6)",
+            "N3: Mascara das Mil Faces - (Manipulacao + Representacao | Dif 7)",
+            "N4: Desaparecimento - (Carisma + Furtividade | Dif Prontidao+Resistencia)",
+            "N5: Cobrir o Grupo - (Oculta Aliados Proximos)",
+            "N6: Mascara da Alma - (Disfarca a Aura contra Auspicios)"
+        ],
+        "Potencia": [
+            "N1 a N6: Forca Brutal - Adiciona sucessos automaticos em testes de Forca e acrescimo de Dano Fisico."
+        ],
+        "Presenca": [
+            "N1: Fascinio - (Carisma + Representacao | Dif 7)",
+            "N2: Olhar Aterrador - (Carisma + Intimidacao | Dif Raciocinio+3)",
+            "N3: Transe - (Aparicao + Empatia | Dif FV do Alvo)",
+            "N4: Convocacao - (Carisma + Labia | Dif 5)",
+            "N5: Majestade - (Incapaz de ser atacado sem teste de Coragem)",
+            "N6: Paixao - (Manipulacao + Labia | Dif FV do Alvo)"
+        ],
+        "Quietus": [
+            "N1: Silencio da Morte - (Zona de Silencio Absoluto)",
+            "N2: Toque de Fraqueza - (Forca de Vontade | Dif Vigor+Fortitude do Alvo)",
+            "N3: Dedo de Doenca - (3 Sangues | Teste de FV vs FV do Alvo)",
+            "N4: Agonia do Sangue - (1 Sangue | Envenena Laminas para Dano Letal)",
+            "N5: Essencia de Sangue - (Diablerie a Distancia)",
+            "N6: Suor de Sangue - (FV vs Vigor+3 do Alvo)"
+        ],
+        "Quimerismo": [
+            "N1: Ignis Fatuus - (1 FV | Ilusao de 1 Sentido)",
+            "N2: Fata Morgana - (2 FV | Ilusao Multissensorial)",
+            "N3: Aparicao - (1 Sangue | Ilusao Movel e Autonoma)",
+            "N4: Cruel Realidade - (Manipulacao + Labia | Dif Percepcao+3 - Causa Dano Real)",
+            "N5: Ilusao Permanente - (Torna Ilusao Duradoura)",
+            "N6: Podridao da Mente - (Destroi a Sanidade do Alvo)"
+        ],
+        "Rapidez": [
+            "N1 a N6: Velocidade Divina - Gasta Sangue para ganhar Acoes Extras por Turno e bonus de Iniciativa."
+        ],
+        "Serpentis": [
+            "N1: Olhos da Serpente - (Forca de Vontade | Dif 9 - Paralisia pelo Olhar)",
+            "N2: Lingua da Serpente - (Destreza+3 | Dif 6 - Lamina Ofidica)",
+            "N3: Pele de Crocodilo - (Resistencia Escamada + Armadura)",
+            "N4: Forma de Serpente - (Transformacao em Cobra Gigante)",
+            "N5: Coracao das Trevas - (Remocao do Proprio Coracao para Imunidade ao Estaca)",
+            "N6: Halito de Corrupcao - (Destreza + Briga | Dif 6)"
+        ],
+        "Taumaturgia": [
+            "Trilha Principal: Rego Vitae (Trilha do Sangue) | Custo: 1 Sangue + FV (Dif Nivel+3)",
+            "N1: Um Gosto por Sangue - (Determina Nivel, Cla e Vitae do Alvo)",
+            "N2: Furia do Sangue - (Forca gasto forcado de Sangue no Alvo)",
+            "N3: Potencia do Sangue - (Reduz temporariamente a Geracao)",
+            "N4: Furto de Vitae - (Rouba Pontos de Sangue a distancia de 15m)",
+            "N5: Caldeirao de Sangue - (Ferve o Sangue do Alvo causando Dano Agravado)"
+        ],
+        "Tenebrosidade": [
+            "N1: Jogo de Sombras - (1 Sangue | Manipulacao de Sombras Visuais)",
+            "N2: Noturno - (Manipulacao + Ocultismo | Dif 7 - Nuvem de Escuridao)",
+            "N3: Bracos de Ahriman - (Manipulacao + Ocultismo | Dif 7 - Tentaculos Sombrios)",
+            "N4: Sombras Noturnas - (Raciocinio + Ocultismo | Dif 7 - Doppelganger de Sombra)",
+            "N5: Forma Tenebrosa - (3 Sangues | Transformacao em Abismo Fluido)",
+            "N6: Caminhar no Abismo - (Inteligencia + Furtividade | Dif 6 - Teleporte pelas Sombras)"
+        ],
+        "Vicissitude": [
+            "N1: Semblante Maleavel - (Destreza + Medicina | Dif 6 - Alteracao Facial)",
+            "N2: Moldar Carne - (Destreza + Medicina | Dif 7 - Deformacoes Fisicas)",
+            "N3: Moldar Ossos - (Destreza + Medicina | Dif 8 - Garras e Armaduras Osseas)",
+            "N4: Forma de Zulo - (2 Sangues | Transforma no Monstro de Guerra +2 Atributos Fisicos)",
+            "N5: Forma de Plasma - (2 Sangues | Corpo em Sangue Vivo)",
+            "N6: Sopro do Dragao - (Vigor+3 | Dif 6 - Dano Agravado por Fogo Mistico)"
+        ]
+    }
+}

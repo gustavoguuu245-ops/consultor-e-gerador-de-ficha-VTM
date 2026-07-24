@@ -48,7 +48,7 @@ def rolar_dados(quantidade:int, dificuldade:int=6, explodir:bool=False) -> dict:
         resposta['uns'] += uns
         resposta['dez'] += dez
             
-    sucessos_finais = sucessos - uns
+    sucessos_finais = resposta['sucessos'] - resposta['uns'] 
     if sucessos_finais < 0:
         if uns > 0 and sucessos == 0:
             resposta['mensagem'] = "FALHA CRÍTICA (FUMBLE)!"
