@@ -15,21 +15,24 @@ def carregar_npcs_base() -> dict:
     """
     base_unificada: dict = {}
 
-    pasta_dados: str = os.path.dirname(__file__)
-    if getattr(sys, 'frozen', False):
+    pasta_dados: str = os.path.join(os.getcwd(), "dados", "npcs_base")
+    if not os.path.exists(pasta_dados) or getattr(sys, 'frozen', False) is True:
         pasta_dados = os.path.join(sys._MEIPASS, "dados", "npcs_base")
-    
+
     if not os.path.exists(pasta_dados):
+        print("Aviso: retornando pasta de NPCs vazia")
         return base_unificada
 
-    # Percorre todos os arquivos .json da pasta dados
-    for arquivo in os.listdir(pasta_dados):
-        # saindo do passo do loop rapidamente se o arquivo não nos interessa
-        if not os.path.isfile(arquivo):
-            continue
-        if not arquivo.endswith(".json"):
-            continue
+    lista_arquivos: list = [
+        e 
+        for e in os.listdir(pasta_dados)
+        if os.path.isfile(os.path.join(pasta_dados, e))
+        and e.endswith(".json")
 
+    ]
+
+    # Percorre todos os arquivos .json da pasta dados
+    for arquivo in lista_arquivos:
         caminho_arquivo = os.path.join(pasta_dados, arquivo)
         try:
             with open(caminho_arquivo, 'r', encoding='utf-8') as f:
@@ -62,16 +65,13 @@ def carregar_icones(categorias:list|str|None) -> dict:
                 resultado[k] = v
         return resultado
 
-
-
-
     resultado: dict = {}
 
     if isinstance(categorias, str):
         categorias = [categorias]
 
-    pasta_dados: str = os.path.dirname(__file__)
-    if getattr(sys, 'frozen', False):
+    pasta_dados: str = os.path.join(os.getcwd(), "dados", "icones")
+    if not os.path.exists(pasta_dados) or getattr(sys, 'frozen', False) is True:
         pasta_dados = os.path.join(sys._MEIPASS, "dados", "icones")
 
     lista_arquivos:list = [
@@ -80,7 +80,7 @@ def carregar_icones(categorias:list|str|None) -> dict:
         if e.endswith('.json')
         and os.path.isfile(os.path.join(pasta_dados, e))
     ]
-
+    
     # carregamos primeiro os arquivos que tem _base...
     lista_prioridades:list = [
         e

@@ -17,7 +17,7 @@ from motor.dice_engine import rolar_dados
 
 # ============================================================
 
-ICONES_NPC = carregar_icones(categorias=['npc'])
+ICONES_NPC = carregar_icones(categorias=['npc'])['npc']
 
 
 # TODO: colocar atributos secundários como opcional para determinaçao de icone
