@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import random
+from dados import NPCS_BASE
 from motor.savenpcsgerados import salvar_npc_em_disco
 
 # Importar o motor de geração
@@ -17,16 +18,7 @@ except ImportError:
         gerar_ficha, formatar_ficha_texto, REGRAS, CLAS,
         EDICOES, NATUREZAS, CONCEITOS
     )
-
-# Importar o banco de dados unificado de NPCs
-try:
-    from dados import NPCS_BASE
-except ImportError:
-    try:
-        from dados.npcsgenericos import NPCS_BASE
-    except ImportError:
-        NPCS_BASE = {}
-
+     
 CORES = {
     "bg_principal": "#0a0a0c",
     "bg_card": "#111115",
