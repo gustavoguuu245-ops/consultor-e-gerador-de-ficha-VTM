@@ -40,7 +40,7 @@ def carregar_npcs_base() -> dict:
 
     return base_unificada
 
-
+NPCS_BASE = carregar_npcs_base()
 def carregar_icones(categorias:list|str|None) -> dict:
     def _carrega_arquivo(caminho:str, categorias:list|None) -> dict:
         resultado:dict = {}

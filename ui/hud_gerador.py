@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import random
+from dados import NPCS_BASE
 from motor.savenpcsgerados import salvar_npc_em_disco
 
 # Importar o motor de geração

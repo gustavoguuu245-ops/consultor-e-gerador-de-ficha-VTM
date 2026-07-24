@@ -169,6 +169,8 @@ O `__init__.py` carrega automaticamente todos os arquivos `.py` da pasta `dados/
 - **Edições suportadas:** 3ª Edição · V20 · V5 · Dark Ages
 - **Ferramenta:** Desenvolvida pela comunidade, para a comunidade
 
+# 🤝 Colaboradores & Agradecimentos
+* **[@nerdmor](https://github.com/nerdmor)** — Refatoração completa da arquitetura do projeto, conversão do banco de dados para JSON.
 ---
 
 > *"A Máscara deve ser preservada. Mas as fichas dos NPCs não precisam ficar escondidas."*
